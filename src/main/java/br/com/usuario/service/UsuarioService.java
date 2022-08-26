@@ -1,5 +1,7 @@
 package br.com.usuario.service;
 
+import java.time.LocalDate;
+
 import org.springframework.stereotype.Service;
 
 import br.com.usuario.domain.Usuario;
@@ -13,7 +15,8 @@ public class UsuarioService {
 		
 		Usuario usuario = UsarioAdapter.adapt(usuarioDTO);
 		
-		usuario.setSenha(usuario.getSenha() + "+999");
+		usuario.setSenha(usuario.getSenha() + "*9");
+		usuario.setCreateAt(LocalDate.now());
 		
 		return usuario.toString();
 	}
