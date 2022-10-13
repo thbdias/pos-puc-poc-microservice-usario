@@ -13,4 +13,7 @@ public class UsarioAdapter {
 		return mapper.map(usuarioDTO, Usuario.class);
 	}
 
+	public static UsuarioDTO adapt (Usuario usuario) {
+		return mapper.map(usuario, UsuarioDTO.class);
+	}
 }

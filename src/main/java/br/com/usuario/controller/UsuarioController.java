@@ -18,7 +18,7 @@ public class UsuarioController {
 	private UsuarioService usuarioService;
 	
 	@PostMapping("/save")
-	public String cadastrar(@RequestBody UsuarioDTO usuarioDTO) {
+	public UsuarioDTO cadastrar(@RequestBody UsuarioDTO usuarioDTO) {
 		return usuarioService.save(usuarioDTO);		
 	}
 
